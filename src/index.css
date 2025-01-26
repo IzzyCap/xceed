@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind forms;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirLTPro-Black.woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirLTPro-Heavy.woff");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirLTPro-Book.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer base {
+  html {
+    font-family: Avenir, system-ui, sans-serif;
+  }
+}
