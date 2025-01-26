@@ -2,7 +2,7 @@ import { useState } from "react";
 import classNames from "classnames";
 import { Artist } from "@/context/Artist";
 import DiscoIcon from "@/assets/img/disco.svg";
-import Arrow from "@/assets/img/arrow.svg";
+// import Arrow from "@/assets/img/arrow.svg";
 
 const BioSection = ({ artist }: { artist: Artist }) => {
   const [lineClamp, setLineClamp] = useState<boolean>(true);
@@ -23,10 +23,10 @@ const BioSection = ({ artist }: { artist: Artist }) => {
     { "max-h-full": !lineClamp }
   );
 
-  const arrowClasses = classNames(
-    "fill-babyBlue stroke-babyBlue",
-    { "transform rotate-180": !lineClamp },
-  )
+  // const arrowClasses = classNames(
+  //   "fill-babyBlue stroke-babyBlue",
+  //   { "transform rotate-180": !lineClamp },
+  // )
   const bioSectionContainer = classNames(
     "flex flex-col",
     { "basis-8/12": artist?.recordLabel },
@@ -41,7 +41,7 @@ const BioSection = ({ artist }: { artist: Artist }) => {
             className="text-base font-black pt-4"
             onClick={handleBioClick}
           >
-            <Arrow className={arrowClasses} />
+            {/* <Arrow className={arrowClasses} /> */}
           </button>
         </div>
         {artist?.recordLabel && (

@@ -4,20 +4,20 @@ import { QueryKeys } from "./typings";
 import { EventListItem } from "@/hooks/useGetEvents/typings";
 import useGetEvents from "@/hooks/useGetEvents/useGetEvents";
 import useGetEvent from "@/hooks/useGetEvent/useGetEvent";
-import XceedLogo from "@/assets/img/xceedLogo.svg";
-import NavBar from "@/components/NavBar";
+// import XceedLogo from "@/assets/img/xceedLogo.svg";
+// import NavBar from "@/components/NavBar";
 import HeroHeader from "@/components/HeroHeader";
 import EventSection from "@/components/EventSection";
 import BioSection from "@/components/BioSection";
 import ModalDialog from "@/components/ModalDialog";
 import dayjs from "dayjs";
 
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { ArtistContext } from "@/context/Artist";
 import LoadingSpinner from "@/components/LoadingSpinner";
 
 const Artist = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const now = dayjs().unix();
   const [isFollowed, setIsFollowed] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -46,7 +46,7 @@ const Artist = () => {
   } = useGetEvents({
     params: {
       sort: "ASC",
-      artists:  artist?.id,
+      artists: artist?.id,
       queryKey: QueryKeys.EVENTS,
       startTime: now
     },
@@ -83,7 +83,7 @@ const Artist = () => {
   };
 
   const handleEditClick = () => {
-    navigate(`/edit/artist/${DEFAULT_ARTIST}`);
+    // navigate(`/edit/artist/${DEFAULT_ARTIST}`);
   };
 
   const handleEventClick = (eventId: EventListItem["id"]) => {
@@ -96,14 +96,14 @@ const Artist = () => {
       getArtistRequest(DEFAULT_ARTIST);
     }
   }, [DEFAULT_ARTIST, getArtistRequest, artist, isArtistLoading]);
-  
+
 
   if (isArtistLoading || !artist)
     return (
       <>
-        <NavBar>
+        {/* <NavBar>
           <XceedLogo className="h-6" />
-        </NavBar>
+        </NavBar> */}
         <div className="flex h-[calc(100vh-72px)]">
           <LoadingSpinner >Loading...</LoadingSpinner>
         </div>
@@ -112,9 +112,9 @@ const Artist = () => {
 
   return (
     <>
-      <NavBar>
+      {/* <NavBar>
         <XceedLogo className="h-6" />
-      </NavBar>
+      </NavBar> */}
       <HeroHeader
         artist={artist}
         onClickFollow={handleFollowClick}

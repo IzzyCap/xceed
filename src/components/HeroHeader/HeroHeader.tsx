@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { Artist } from "@/context/Artist";
-import Pencil from "@/assets/img/pencil.svg";
+// import Pencil from "@/assets/img/pencil.svg";
 import PlayerButton from "@/components/PlayerButton";
 import ArtistInfo from "@/components/ArtistInfo";
 
@@ -51,7 +51,7 @@ export default function HeroHeader({
               className="rounded-full px-[1.875rem] py-3 px-7 flex gap-3 items-center border-2 text-white font-avenirHeavy "
               onClick={onClickEdit}
             >
-              <Pencil /> Edit
+              {/* <Pencil /> Edit */}
             </button>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import { Artist } from "@/context/Artist";
 import { useRef, useState } from "react";
-import Play from "@/assets/img/play.svg";
-import Pause from "@/assets/img/pause.svg";
+// import Play from "@/assets/img/play.svg";
+// import Pause from "@/assets/img/pause.svg";
 
 interface PlayerButtonProps {
   tracks: Artist["tracks"];
@@ -33,7 +33,7 @@ const PlayerButton = ({ tracks }: PlayerButtonProps) => {
       data-testid="play-button"
       onClick={toggleAudio}
     >
-      {isAudioPlaying ? <Pause className="w-[25px] h-[25px] fill-white " data-testid="pause-icon"/> : <Play className="w-[25px] h-[25px]" data-testid="play-icon" />}
+      {/* {isAudioPlaying ? <Pause className="w-[25px] h-[25px] fill-white " data-testid="pause-icon"/> : <Play className="w-[25px] h-[25px]" data-testid="play-icon" />} */}
       {tracks.length > 0 && <audio
         ref={audioRef}
         src={tracks[0].url}
